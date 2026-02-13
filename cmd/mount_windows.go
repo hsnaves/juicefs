@@ -127,6 +127,10 @@ func mountFlags() []cli.Flag {
 				return nil
 			},
 		},
+		&cli.StringFlag{
+			Name:  "encrypt-rsa-key",
+			Usage: "path to the rsa key",
+		},
 	}
 }
 

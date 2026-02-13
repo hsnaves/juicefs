@@ -181,6 +181,9 @@ func updateFormat(c *cli.Context) func(*meta.Format) {
 		if c.IsSet("download-limit") {
 			format.DownloadLimit = utils.ParseMbps(c, "download-limit")
 		}
+		if c.IsSet("encrypt-rsa-key") {
+			format.EncryptKey = loadEncrypt(c.String("encrypt-rsa-key"))
+		}
 	}
 }
 

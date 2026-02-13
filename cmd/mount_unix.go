@@ -393,6 +393,10 @@ func mountFlags() []cli.Flag {
 			Name:  "hide-internal",
 			Usage: "hide all internal files (.accesslog, .stats, etc.)",
 		},
+		&cli.StringFlag{
+			Name:  "encrypt-rsa-key",
+			Usage: "path to the rsa key",
+		},
 	}
 	if runtime.GOOS == "linux" {
 		selfFlags = append(selfFlags, &cli.BoolFlag{
